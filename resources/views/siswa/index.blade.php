@@ -30,7 +30,7 @@
                 <td>{{$siswa->age}}</td>
                 <td>{{$siswa->address}}</td>
                 <td>
-                    <a href="/siswa/{{$siswa->id}}/edit" class="btn btn-warning">Edit</a> 
+                    <a href="/siswa/{{$siswa->id}}/edit" class="btn btn-warning">Edit</a>
                     <a href="/siswa/{{$siswa->id}}/delete" class="btn btn-danger" onClick="return confirm('Are you sure?')">Delete</a>
                 </td>
              </tr>
@@ -59,12 +59,12 @@
                  {{csrf_field()}}
                  <div class="form-group">
                   <label for="exampleInputEmail1">First Name</label>
-                  <input name="first_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+                  <input name="first_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name" required autocomplete="text">
                  </div>
     
                  <div class="form-group">
                   <label for="exampleInputEmail1">Last Name</label>
-                  <input name="last_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name">
+                  <input name="last_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name" required autocomplete="text">
      
                  <div class="form-group">
                  <label for="exampleFormControlSelect1">Gender</label>
@@ -76,12 +76,12 @@
                 
                  <div class="form-group">
                   <label for="exampleInputEmail1">Age</label>
-                  <input name="age" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Age">
+                  <input name="age" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Age" required autocomplete="integer">
                  </div>
 
                  <div class="form-group">
                   <label for="exampleFormControlTextarea1">Address</label>
-                  <textarea name="address" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea name="address" class="form-control" id="exampleFormControlTextarea1" rows="3" required autocomplete="text"></textarea>
                  </div>
                  
                 
